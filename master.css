@@ -1,0 +1,50 @@
+html {
+  color: #5B4B49;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 24px;
+  background: #F7BFB4;
+  padding: 5vh 0 10vh;
+}
+
+h1 {
+  font-family: 'Scope One', serif;
+}
+p {
+  font-size: 0.8rem;
+  padding: 0.5rem 3rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.bins {
+  display: grid;
+  grid-template-columns: 1 1 1;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  margin: 0.5rem;
+}
+.bin {
+  padding: 0.5rem 0.5rem;
+  border: 2px solid #23967F;
+  border-radius: 0.25rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.bin-fill {
+  display: block;
+  width: 0px;
+  background: #7DAF9C;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: width 0.5s ease;
+  z-index: -100;
+}
+.answer {
+  font-size: 1rem;
+  font-weight: 900;
+}
