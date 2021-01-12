@@ -1,21 +1,25 @@
 html {
   color: #5B4B49;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   font-size: 24px;
   background: #F7BFB4;
-  padding: 5vh 0 10vh;
+  padding: 3vh 0 10vh;
 }
 
 h1 {
   font-family: 'Scope One', serif;
+  line-height: 1.1;
 }
 p {
-  font-size: 0.8rem;
-  padding: 0.5rem 3rem;
+  font-size: 0.717rem;
   max-width: 850px;
+  margin: 0;
+}
+.info {
   margin: 0 auto;
+  padding: 0.5rem;
 }
 
 .bins {
