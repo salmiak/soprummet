@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Ska jag gå ut med soporna?",
+    "short_name": "Soprummet",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#f7bfb4",
+    "background_color": "#f7bfb4",
     "display": "standalone"
 }
