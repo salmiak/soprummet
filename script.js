@@ -62,8 +62,6 @@ let updateValues = function() {
   document.querySelector('.lastUpdate').innerHTML = moment().valueOf() - firstLoad
   dates.forEach((bin, i) => {
     let val = getCurrentPos( +bin.start, +bin.stop, +moment() )
-    console.log(bin.id) // eslint-disable-line no-console
-    console.log({val}) // eslint-disable-line no-console
     if (val < 0) {
       document.querySelector(`#${bin.id} .bin-fill`).style.width = '100%'
       document.querySelector(`#${bin.id} .answer`).innerHTML = 'vänta'
@@ -77,8 +75,6 @@ let updateValues = function() {
     }
   });
 }
-
-// setInterval(updateValues, 5000);
 
 document.addEventListener("visibilitychange", updateValues, false);
 
