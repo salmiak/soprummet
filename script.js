@@ -56,19 +56,30 @@ getCurrentPos = function(start, stop, value) {
   return normValue / distance
 }
 
-dates.forEach((bin, i) => {
-  let val = getCurrentPos( +bin.start, +bin.stop, +moment() )
-  console.log(bin.id) // eslint-disable-line no-console
-  console.log({val}) // eslint-disable-line no-console
-  if (val < 0) {
-    document.querySelector(`#${bin.id} .bin-fill`).style.width = '100%'
-    document.querySelector(`#${bin.id} .answer`).innerHTML = 'vänta'
-    document.querySelector(`#${bin.id} .next`).innerHTML = 'senare idag'
-    document.querySelector(`#${bin.id} .next`).title = 'Senare idag'
-  } else {
-    document.querySelector(`#${bin.id} .bin-fill`).style.width = val * 100 + '%'
-    document.querySelector(`#${bin.id} .answer`).innerHTML = val < 0.3 ? 'ja' : val < 0.8 ? 'kanske' : 'vänta'
-    document.querySelector(`#${bin.id} .next`).innerHTML = bin.stop.fromNow()
-    document.querySelector(`#${bin.id} .next`).title = bin.stop.format('[På] dddd')
-  }
-});
+const firstLoad = moment().valueOf();
+
+let updateValues = function() {
+  document.querySelector('.lastUpdate').innerHTML = moment().valueOf() - firstLoad
+  dates.forEach((bin, i) => {
+    let val = getCurrentPos( +bin.start, +bin.stop, +moment() )
+    console.log(bin.id) // eslint-disable-line no-console
+    console.log({val}) // eslint-disable-line no-console
+    if (val < 0) {
+      document.querySelector(`#${bin.id} .bin-fill`).style.width = '100%'
+      document.querySelector(`#${bin.id} .answer`).innerHTML = 'vänta'
+      document.querySelector(`#${bin.id} .next`).innerHTML = 'senare idag'
+      document.querySelector(`#${bin.id} .next`).title = 'Senare idag'
+    } else {
+      document.querySelector(`#${bin.id} .bin-fill`).style.width = val * 100 + '%'
+      document.querySelector(`#${bin.id} .answer`).innerHTML = val < 0.3 ? 'ja' : val < 0.8 ? 'kanske' : 'vänta'
+      document.querySelector(`#${bin.id} .next`).innerHTML = bin.stop.fromNow()
+      document.querySelector(`#${bin.id} .next`).title = bin.stop.format('[På] dddd')
+    }
+  });
+}
+
+// setInterval(updateValues, 5000);
+
+document.addEventListener("visibilitychange", updateValues, false);
+
+updateValues()
