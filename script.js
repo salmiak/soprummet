@@ -39,7 +39,7 @@ let dates = [
   {
     // Fridays even weeks
     id: 'metal',
-    start: moment(twoAClock).day( moment().isoWeek() % 2 ? -2 : moment(twoAClock).day() >= 5 ? 5 : -9 ).add(moment().isoWeek() % 2, 'w'),
+    start: moment(twoAClock).day( moment().isoWeek() % 2 ? -2 : moment(twoAClock).day() >= 5 ? 5 : -9 ),
     stop:  moment(twoAClock).day( moment().isoWeek() % 2 ? -2 : moment(twoAClock).day() >= 5 ? 5 : -9 ).add(2, 'w')
   },
   {
