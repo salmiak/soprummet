@@ -13,16 +13,16 @@ let dates = [
     stop:  moment(twoAClock).day( moment(twoAClock).day() >= 1 ? 1 :-6 ).add(1,'w')
   },
   {
-    // Mondays and Thursday
+    // Mondays and Thursday and Friday
     id: 'well',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 4 ? 4 : moment(twoAClock).day() >= 1 ? 1 : -3 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 4 ? 8 : moment(twoAClock).day() >= 1 ? 4 : 1 )
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 4 ? 4 : moment(twoAClock).day() >= 1 ? 1 : -2 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 8 : moment(twoAClock).day() >= 4 ? 5 : moment(twoAClock).day() >= 1 ? 4 : 1 )
   },
   {
-    // Tuesdays and Friday
+    // Mondays, Tuesdays and Friday
     id: 'plastic',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 2 ? 2 : -2 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 9 : moment(twoAClock).day() >= 2 ? 5 : 2 )
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 2 ? 2 :  moment(twoAClock).day() >= 1 ? 1 : -2 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 9 : moment(twoAClock).day() >= 2 ? 5 : moment(twoAClock).day() >= 1 ? 2 : 1 )
   },
   {
     // Wednesday
