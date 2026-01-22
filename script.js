@@ -7,34 +7,34 @@ let twoAClock = moment().set({
 
 let dates = [
   {
-    // Mondays
+    // Tuesdays and Friday
     id: 'paper',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 1 ? 1 :-6 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 1 ? 1 :-6 ).add(1,'w')
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 2 ? 2 : -2 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 8 : moment(twoAClock).day() >= 2 ? 5 : 2 )
   },
   {
-    // Mondays and Thursday and Friday
+    // Tuesdays and Friday
     id: 'well',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 4 ? 4 : moment(twoAClock).day() >= 1 ? 1 : -2 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 8 : moment(twoAClock).day() >= 4 ? 5 : moment(twoAClock).day() >= 1 ? 4 : 1 )
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 2 ? 2 : -2 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 8 : moment(twoAClock).day() >= 2 ? 5 : 2 )
   },
   {
-    // Mondays, Tuesdays and Friday
+    // Monday and Friday
     id: 'plastic',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 2 ? 2 :  moment(twoAClock).day() >= 1 ? 1 : -2 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 9 : moment(twoAClock).day() >= 2 ? 5 : moment(twoAClock).day() >= 1 ? 2 : 1 )
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 1 ? 1 : -2 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 8 : moment(twoAClock).day() >= 1 ? 5 : 1 )
   },
   {
-    // Wednesday
+    // Tuesday
     id: 'bio',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 3 ? 3 :-4 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 3 ? 3 :-4 ).add(1,'w')
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 2 ? 2 :-5 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 2 ? 2 :-5 ).add(1,'w')
   },
   {
-    // Wednesdays
+    // Mondays
     id: 'glas',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 3 ? 3 :-4 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 3 ? 3 :-4 ).add(1, 'w')
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 1 ? 1 :-6 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 1 ? 1 :-6 ).add(1, 'w')
   },
   {
     // Fridays even weeks
@@ -43,10 +43,10 @@ let dates = [
     stop:  moment(twoAClock).day( moment().isoWeek() % 2 ? -2 : moment(twoAClock).day() >= 5 ? 5 : -9 ).add(2, 'w')
   },
   {
-    // Tuesdays and Friday
+    // Monday and Thursday
     id: 'household',
-    start: moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 5 : moment(twoAClock).day() >= 2 ? 2 : -2 ),
-    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 5 ? 9 : moment(twoAClock).day() >= 2 ? 5 : 2 )
+    start: moment(twoAClock).day( moment(twoAClock).day() >= 4 ? 4 : moment(twoAClock).day() >= 1 ? 1 : -3 ),
+    stop:  moment(twoAClock).day( moment(twoAClock).day() >= 4 ? 8 : moment(twoAClock).day() >= 1 ? 4 : 1 )
   }
 ]
 
